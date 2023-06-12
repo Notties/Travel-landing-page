@@ -1,4 +1,12 @@
+import Explore from "./components/explore/Explore";
+import Features from "./components/features/Features";
+import Footer from "./components/footer/Footer";
+import { Hero } from "./components/hero/Hero";
 import Nav from "./components/nav/Nav";
+import Services from "./components/services/Services";
+import Subscribe from "./components/subscribe/Subscribe";
+import Testiminials from "./components/testiminials/Testiminials";
+import Travel from "./components/travel/Travel";
 
 export default function Home() {
   return (
@@ -10,10 +18,16 @@ export default function Home() {
           w-[500px] h-[500px] top-[-450%] left-[-25%]
         "
         />
-
           <Nav />
-
       </div>
+      <Hero />
+      <Services />
+      <Explore />
+      <Travel />
+      <Features />
+      <Testiminials />
+      <Subscribe />
+      <Footer />
     </>
   );
 }
