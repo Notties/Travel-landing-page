@@ -1,3 +1,7 @@
+### Design by [uix desing](https://www.figma.com/@uixdesign)
+### Template [Figma Landing Page UI Design in Figma](https://www.figma.com/community/file/1243486162245593034/Landing-Page-UI-Design-in-Figma)
+
+# 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
