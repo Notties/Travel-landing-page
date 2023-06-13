@@ -15,11 +15,11 @@ export default function Home() {
         <div
           className="
         bg-[#FF5722] blur-[270px] -z-50 absolute
-          w-[500px] h-[500px] top-[-450%] left-[-25%]
+          w-[500px] h-[300px] top-[-100%] left-[-25%]
         "
         />
-          <Nav />
       </div>
+      <Nav />
       <Hero />
       <Services />
       <Explore />
