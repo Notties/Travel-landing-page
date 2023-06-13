@@ -24,3 +24,37 @@
 .btn:hover {
     box-shadow: #818181 0 10px 20px -10px;
 }
+
+.btn-sec {
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    border-radius: 999px;
+    box-sizing: border-box;
+    color: #222831;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 25px;
+    user-select: none;
+    width: fit-content;
+    transition: all 0.5s ease;
+}
+
+.btn-sec:hover {
+    box-shadow: #818181 0 10px 20px -10px;
+}
+
+.btn-light {
+    background-color: #FFFFFF;
+    border-radius: 999px;
+    box-sizing: border-box;
+    color: #222831;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 25px;
+    user-select: none;
+    width: fit-content;
+    transition: all 0.5s ease;
+    box-shadow: #eeeeee 5px 15px 30px -5px;
+}
