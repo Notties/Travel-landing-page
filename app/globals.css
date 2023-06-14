@@ -5,6 +5,7 @@
 *{
     font-size: 14px;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .btn {
