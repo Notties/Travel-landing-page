@@ -4,10 +4,17 @@ export const Hero = () => {
   return (
     <section id="#" className="">
       <div
-        className="h-[100vh] border border-red-600 mx-[10%] my-[2%]
-      grid grid-cols-5"
+        className="border border-red-600 mx-[10%] my-[2%]
+      grid grid-cols-5
+      max-[1060px]:mx-[3%]
+      max-[790px]:grid-cols-6
+      "
       >
-        <div className="border border-blue-700 col-span-2 my-[15%]">
+        <div className="border border-blue-700 col-span-2 my-[15%]
+          max-[1060px]:col-span-2.5
+          max-[790px]:col-span-3
+          max-[640px]:col-span-6
+        ">
           <div className="flex flex-col gap-10">
             <button className="btn-light flex flex-row gap-3.5">
               <p className="mt-0.5 font-semibold text-[#F85E9F]">
@@ -20,11 +27,17 @@ export const Hero = () => {
                 alt={"work"}
               />
             </button>
-            <span className="font-bold text-[6.5rem] leading-tight">
+            <span className="font-bold text-[6.5rem] leading-tight
+              max-[1675px]:text-[4.5rem]
+              max-[1170px]:text-[3.5rem]
+            ">
               Travel{" "}
               {
                 <>
-                  <span className="font-bold text-[6.5rem] text-[#F85E9F]">
+                  <span className="font-bold text-[6.5rem] text-[#F85E9F]
+                    max-[1675px]:text-[4.5rem]
+                    max-[1170px]:text-[3.5rem]
+                  ">
                     top <br /> destination
                   </span>
                 </>
@@ -32,13 +45,27 @@ export const Hero = () => {
               <br />
               of the world
             </span>
-            <p className="text-[#191825]/[50%] text-xl">
-              We always make our customer happy by providing <br />
+            <p className="text-[#191825]/[50%] text-xl
+              max-[1325px]:text-[1rem]
+            ">
+              We always make our customer happy by providing <br className="
+              max-[890px]:hidden
+              max-[640px]:flex
+              max-[360px]:hidden
+              "/>
               as many choices as possible
             </p>
-            <div className="flex flex-row gap-5">
-              <button className="btn">Get Started</button>
-              <button className="btn-sec flex flex-row gap-2">
+            <div className="flex flex-row gap-5
+            max-[880px]:gap-3
+            max-[880px]:bottom-[20%]
+            max-[880px]:
+            ">
+              <button className="btn
+              max-[880px]:px-6
+              ">Get Started</button>
+              <button className="btn-sec flex flex-row gap-2
+              max-[880px]:px-6
+              ">
                 <Image
                   src={"/icons/play-circle.png"}
                   width={24}
@@ -50,7 +77,13 @@ export const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="border border-yellow-300 col-span-3 ">
+
+        {/* images */}
+        <div className="border border-yellow-300 col-span-3
+          max-[1060px]:col-span-2.5
+          max-[790px]:col-span-3
+          max-[640px]:hidden
+        ">
           <div className="flex justify-center">
             <div className="absolute -z-10">
               <Image
@@ -62,8 +95,15 @@ export const Hero = () => {
               />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-10 border border-green-600 z-10 mt-[10%] mx-[10%]">
-              <div className="border border-blue-400 grid justify-center gap-10">
+          <div className="grid h-auto grid-cols-2 gap-10 border border-green-600 z-10 mt-[10%] mx-[10%]
+            max-[1060px]:my-[10%]
+            max-[1060px]:mx-[5%]
+            max-[790px]:gap-5
+            max-[790px]:mt-[30%]
+          ">
+              <div className="border border-blue-400 grid justify-center gap-10 
+              max-[790px]:gap-5
+              ">
               <Image
                 src={"/hero/place1.png"}
                 width={372}

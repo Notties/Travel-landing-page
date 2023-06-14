@@ -14,8 +14,8 @@ export default function Home() {
       <div className="relative">
         <div
           className="
-        bg-[#FF5722] blur-[270px] -z-50 absolute
-          w-[500px] h-[300px] top-[-100%] left-[-25%]
+        bg-[#FF5722]  blur-[270px] -z-50 absolute
+          w-[40%] h-[200px] top-[-100%] left-[-25%]
         "
         />
       </div>

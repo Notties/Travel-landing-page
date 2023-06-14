@@ -26,9 +26,12 @@ const Nav = () => {
 
   return (
     <>
-      <div className="top-0 sticky">
+      <div className="top-0 sticky
+        
+      ">
         <nav
           className={`flex flex-row justify-around p-5
+          max-[768px]:justify-between
           ${!top && "border-b-[1px] backdrop-blur-lg bg-white/80"}
           `}
         >
@@ -46,7 +49,9 @@ const Nav = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-row items-center">
+          <div className="flex flex-row items-center
+            max-[768px]:hidden
+          ">
             <ul className="flex flex-row gap-10">
               <li
                 className="
@@ -78,7 +83,9 @@ const Nav = () => {
               </li>
             </ul>
           </div>
-          <div className="flex flex-row items-center gap-5">
+          <div className="flex flex-row items-center gap-5
+            max-[768px]:hidden
+          ">
             <button className="font-semibold">Log In</button>
             <button className="btn ">Sign Up</button>
           </div>
