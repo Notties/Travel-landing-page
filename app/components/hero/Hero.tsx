@@ -2,19 +2,20 @@ import Image from "next/image";
 import p1 from "../../../public/hero/place1.png";
 import p2 from "../../../public/hero/place2.png";
 import p3 from "../../../public/hero/place3.png";
+import layer from "../../../public/hero/layer.png";
 
 export const Hero = async () => {
   return (
     <section id="#" className="">
       <div
-        className="border border-red-600 mx-[10%] my-[2%]
+        className="mx-[10%] my-[2%]
       grid grid-cols-5
       max-[1060px]:mx-[3%]
       max-[790px]:grid-cols-6
       "
       >
         <div
-          className="border border-blue-700 col-span-2 my-[15%]
+          className="col-span-2 my-[15%]
           max-[1060px]:col-span-2.5
           max-[790px]:col-span-3
           max-[640px]:col-span-6
@@ -79,6 +80,7 @@ export const Hero = async () => {
               <button
                 className="btn
               max-[880px]:px-6
+              max-[640px]:px-7
               "
               >
                 Get Started
@@ -86,6 +88,7 @@ export const Hero = async () => {
               <button
                 className="btn-sec flex flex-row gap-2
               max-[880px]:px-6
+              max-[640px]:px-7
               "
               >
                 <Image
@@ -102,7 +105,7 @@ export const Hero = async () => {
 
         {/* images */}
         <div
-          className="border border-yellow-300 col-span-3
+          className="col-span-3
           max-[1060px]:col-span-2.5
           max-[790px]:col-span-3
           max-[640px]:hidden
@@ -111,7 +114,7 @@ export const Hero = async () => {
           <div className="flex justify-center">
             <div className="absolute -z-10">
               <Image
-                src={"/hero/layer.png"}
+                src={layer}
                 width={872}
                 height={387}
                 alt={"layer"}
@@ -120,7 +123,7 @@ export const Hero = async () => {
             </div>
           </div>
           <div
-            className="grid h-auto grid-cols-2 gap-10 border border-green-600 z-10 mt-[10%] mx-[10%]
+            className="grid h-auto grid-cols-2 gap-10 z-10 mt-[10%] mx-[10%]
             max-[1060px]:my-[10%]
             max-[1060px]:mx-[5%]
             max-[790px]:gap-5
@@ -128,8 +131,8 @@ export const Hero = async () => {
           "
           >
             <div
-              className="border border-blue-400 grid justify-center gap-10 
-              max-[790px]:gap-5
+              className="grid justify-center gap-5
+              max-[790px]:gap-2
               "
             >
               <Image
@@ -138,38 +141,97 @@ export const Hero = async () => {
                 height={400}
                 alt={"place1"}
                 placeholder="blur"
-                className="rounded-lg"
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
+                className="scale-95 rounded-[12%] transition-all duration-300 
+                hover:shadow-2xl hover:scale-100 z-10"
               />
+              <div className="relative w-0 h-0">
+                <button
+                  className="bg-[#F85E9F] w-[64px] h-[64px] rounded-[50%]
+                absolute -top-20 -left-7 flex justify-center transition-all duration-300
+                hover:shadow-lg z-10
+                max-[1060px]:w-[48px]
+                max-[1060px]:h-[48px]
+                max-[1060px]:-top-14
+                max-[1060px]:-left-
+                max-[790px]:w-[32px]
+                max-[790px]:h-[32px]
+                max-[790px]:-top-9
+                max-[790px]:-left-4
+              "
+                >
+                  <Image
+                    src={"/hero/nav.png"}
+                    width={64}
+                    height={64}
+                    alt={"nav"}
+                    className="h-full w-full p-[23%] "
+                  />
+                </button>
+              </div>
               <Image
                 src={p2}
                 width={372}
                 height={400}
                 alt={"place1"}
                 placeholder="blur"
-                className="rounded-lg"
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
+                className="scale-95 rounded-[12%] transition-all duration-300 
+                hover:shadow-2xl hover:scale-100 z-10"
               />
             </div>
-            <div className="border border-blue-400 grid items-center">
+            <div className="grid items-center">
               <Image
                 src={p3}
                 width={372}
                 height={400}
                 alt={"place3"}
                 placeholder="blur"
-                className="rounded-lg"
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
+                className="mt-[30%] scale-95 rounded-[12%] transition-all duration-300 
+                hover:shadow-2xl hover:scale-100 z-10"
               />
+              <div className="relative w-0 h-0">
+                <div className="absolute w-[12rem] -top-[16rem] left-[17rem] z-10 transition-all
+                max-[1555px]:-top-[14rem] max-[1555px]:left-[13rem]
+                max-[1250px]:-top-[11rem] max-[1250px]:left-[9rem]
+                max-[1060px]:left-[7rem]
+                max-[915px]:left-[6rem]
+                max-[790px]:-top-[1rem] max-[790px]:-left-[8rem]
+                ">
+                  <button className="btn-light flex flex-row gap-3.5 ">
+                    <Image
+                      src={"/hero/map.png"}
+                      width={24}
+                      height={24}
+                      alt={"map"}
+                    />
+                    <p className="mt-0.5 font-semibold ">
+                      Top places
+                    </p>
+                  </button>
+                </div>
+
+                <button
+                  className="bg-[#FF5722] w-[64px] h-[64px] rounded-[50%]
+                absolute -top-16 left-32 flex justify-center transition-all duration-300
+                hover:shadow-lg z-10
+                max-[1060px]:w-[48px]
+                max-[1060px]:h-[48px]
+                max-[1060px]:-top-14
+                max-[1060px]:-left-
+                max-[790px]:w-[32px]
+                max-[790px]:h-[32px]
+                max-[790px]:-top-9
+                max-[790px]:left-16
+              "
+                >
+                  <Image
+                    src={"/hero/addfriend.png"}
+                    width={64}
+                    height={64}
+                    alt={"addfriend"}
+                    className="h-full w-full p-[23%] "
+                  />
+                </button>
+              </div>
             </div>
           </div>
         </div>

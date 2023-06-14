@@ -27,7 +27,7 @@ const Nav = () => {
   return (
     <>
       <div className="top-0 sticky
-        
+        z-50
       ">
         <nav
           className={`flex flex-row justify-around p-5
