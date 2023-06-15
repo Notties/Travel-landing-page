@@ -10,18 +10,20 @@ export const Hero = async () => {
       <div
         className="mx-[10%] my-[2%]
       grid grid-cols-5
-      max-[1060px]:mx-[3%]
-      max-[790px]:grid-cols-6
+      max-[1360px]:mx-[3%]
       "
       >
         <div
           className="col-span-2 my-[15%]
-          max-[1060px]:col-span-2.5
-          max-[790px]:col-span-3
-          max-[640px]:col-span-6
+          max-[1024px]:col-span-5
+          max-[1024px]:order-last
+          max-[1024px]:my-[5%]
         "
         >
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-10
+            max-[1024px]:items-center
+
+          ">
             <button className="btn-light flex flex-row gap-3.5">
               <p className="mt-0.5 font-semibold text-[#F85E9F]">
                 Explore the world!
@@ -37,6 +39,8 @@ export const Hero = async () => {
               className="font-bold text-[6.5rem] leading-tight
               max-[1675px]:text-[4.5rem]
               max-[1170px]:text-[3.5rem]
+              max-[1024px]:text-[4rem]
+              max-[1024px]:text-center
             "
             >
               Travel{" "}
@@ -46,18 +50,26 @@ export const Hero = async () => {
                     className="font-bold text-[6.5rem] text-[#F85E9F]
                     max-[1675px]:text-[4.5rem]
                     max-[1170px]:text-[3.5rem]
+                    max-[1024px]:text-[4rem]
+                    max-[1024px]:text-center
+
                   "
                   >
-                    top <br /> destination
+                    top <br className="flex
+                    max-[1024px]:hidden
+                    "/> destination
                   </span>
                 </>
-              }
-              <br />
+              }{" "}
+              <br className="flex
+                
+              "/>
               of the world
             </span>
             <p
               className="text-[#191825]/[50%] text-xl
               max-[1325px]:text-[1rem]
+              max-[1024px]:text-center
             "
             >
               We always make our customer happy by providing{" "}
@@ -79,16 +91,12 @@ export const Hero = async () => {
             >
               <button
                 className="btn
-              max-[880px]:px-6
-              max-[640px]:px-7
               "
               >
                 Get Started
               </button>
               <button
                 className="btn-sec flex flex-row gap-2
-              max-[880px]:px-6
-              max-[640px]:px-7
               "
               >
                 <Image
@@ -106,13 +114,13 @@ export const Hero = async () => {
         {/* images */}
         <div
           className="col-span-3
-          max-[1060px]:col-span-2.5
-          max-[790px]:col-span-3
-          max-[640px]:hidden
+          max-[1024px]:col-span-5
         "
         >
-          <div className="flex justify-center">
-            <div className="absolute -z-10">
+          <div className="flex justify-center ">
+            <div className="absolute -z-10
+            max-[1024px]:mx-[5%]
+            ">
               <Image
                 src={layer}
                 width={872}
@@ -124,10 +132,9 @@ export const Hero = async () => {
           </div>
           <div
             className="grid h-auto grid-cols-2 gap-10 z-10 mt-[10%] mx-[10%]
-            max-[1060px]:my-[10%]
-            max-[1060px]:mx-[5%]
+            max-[1024px]:my-[10%]
+            max-[1024px]:mx-[5%]
             max-[790px]:gap-5
-            max-[790px]:mt-[30%]
           "
           >
             <div
@@ -149,14 +156,14 @@ export const Hero = async () => {
                   className="bg-[#F85E9F] w-[64px] h-[64px] rounded-[50%]
                 absolute -top-20 -left-7 flex justify-center transition-all duration-300
                 hover:shadow-lg z-10
-                max-[1060px]:w-[48px]
-                max-[1060px]:h-[48px]
-                max-[1060px]:-top-14
-                max-[1060px]:-left-
-                max-[790px]:w-[32px]
-                max-[790px]:h-[32px]
-                max-[790px]:-top-9
-                max-[790px]:-left-4
+                max-[1024px]:w-[58px]
+                max-[1024px]:h-[58px]
+                max-[1024px]:-top-19
+                max-[1024px]:-left-4
+                max-[620px]:w-[48px]
+                max-[620px]:h-[48px]
+                max-[620px]:-top-12
+                max-[620px]:-left-4
               "
                 >
                   <Image
@@ -192,9 +199,14 @@ export const Hero = async () => {
                 <div className="absolute w-[12rem] -top-[16rem] left-[17rem] z-10 transition-all
                 max-[1555px]:-top-[14rem] max-[1555px]:left-[13rem]
                 max-[1250px]:-top-[11rem] max-[1250px]:left-[9rem]
-                max-[1060px]:left-[7rem]
-                max-[915px]:left-[6rem]
-                max-[790px]:-top-[1rem] max-[790px]:-left-[8rem]
+                max-[1024px]:left-[16rem] max-[1024px]:-top-[14rem]
+                max-[840px]:left-[13rem] max-[840px]:-top-[14rem]
+                max-[720px]:left-[11rem] max-[720px]:-top-[13rem]
+                max-[670px]:left-[9rem] max-[670px]:-top-[13rem]
+                max-[600px]:left-[7rem] max-[600px]:-top-[12rem]
+                max-[550px]:left-[5rem] max-[550px]:-top-[11rem]
+                max-[500px]:left-[3rem] max-[500px]:-top-[10rem]
+                max-[430px]:left-[1rem] max-[430px]:-top-[8rem]
                 ">
                   <button className="btn-light flex flex-row gap-3.5 ">
                     <Image
@@ -213,14 +225,14 @@ export const Hero = async () => {
                   className="bg-[#FF5722] w-[64px] h-[64px] rounded-[50%]
                 absolute -top-16 left-32 flex justify-center transition-all duration-300
                 hover:shadow-lg z-10
-                max-[1060px]:w-[48px]
-                max-[1060px]:h-[48px]
-                max-[1060px]:-top-14
-                max-[1060px]:-left-
-                max-[790px]:w-[32px]
-                max-[790px]:h-[32px]
-                max-[790px]:-top-9
-                max-[790px]:left-16
+                max-[1024px]:w-[58px]
+                max-[1024px]:h-[58px]
+                max-[1024px]:-top-9
+                max-[1024px]:left-24
+                max-[620px]:w-[48px]
+                max-[620px]:h-[48px]
+                max-[620px]:-top-7
+                max-[620px]:left-16
               "
                 >
                   <Image
