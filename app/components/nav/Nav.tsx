@@ -65,7 +65,7 @@ const Nav = () => {
                     cursor-pointer transition-all text-gray-400 font-semibold
                     hover:text-[#222831]"
               >
-                <a href="#">Discover</a>
+                <a href="#services">Discover</a>
               </li>
               <li
                 className="
