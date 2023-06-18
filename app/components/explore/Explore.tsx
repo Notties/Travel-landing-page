@@ -20,23 +20,48 @@ const Explore = () => {
   const [arrowLeft, setArrowLeft] = useState(false);
   const [arrowRight, setArrowRight] = useState(false);
 
+  const [currentCards, setCurrentCards] = useState(JsonExplore);
+
+  const handleNextCard = () => {
+    setCurrentCards((prevCards) => {
+      const nextCards = [...prevCards];
+      const firstCard: any = nextCards.shift();
+      nextCards.push(firstCard);
+      return nextCards;
+    });
+  };
+
+  const handlePrevCard = () => {
+    setCurrentCards((prevCards: any) => {
+      const prevCard = prevCards.pop();
+      const nextCards = [prevCard, ...prevCards];
+      return nextCards;
+    });
+  };
+
   return (
     <>
       <section id="explore" className="">
-        <div className="grid grid-cols-1 grid-rows-6 mx-[10%]
+        <div
+          className="grid grid-cols-1 grid-rows-6 mx-[10%]
         max-[1024px]:mx-[5%] max-[1024px]:my-[10%]
         max-[1024px]:grid-rows-4       
         max-[730px]:grid-rows-6      
-        ">
+        "
+        >
           {/* Top */}
-          <div className="flex row-span-1 h-full w-full
+          <div
+            className="flex row-span-1 h-full w-full
           max-[1024px]:
           max-[1024px]:flex-col
-          ">
-            <div className="flex justify-center flex-col w-full h-full
+          "
+          >
+            <div
+              className="flex justify-center flex-col w-full h-full
             items-start
             max-[1024px]:items-center
-            ">
+            "
+            >
               <span
                 className="font-bold text-[#F85E9F] text-[1.8rem] tracking-[0.3rem]
             max-[1170px]:text-[1.6rem]
@@ -58,12 +83,14 @@ const Explore = () => {
                 Explore top destination
               </span>
             </div>
-            <div className="flex items-center justify-end w-full h-full gap-10
+            <div
+              className="flex items-center justify-end w-full h-full gap-10
             max-[1024px]:items-center
             max-[1024px]:justify-center
             max-[730px]:justify-between
             
-            ">
+            "
+            >
               <button
                 className="flex w-[100px] h-[100px] rounded-[50%] bg-[#FFFFFF] 
             border-[1px] border-[#191825]/[10%]
@@ -74,6 +101,7 @@ const Explore = () => {
             "
                 onMouseEnter={() => setArrowLeft(true)}
                 onMouseLeave={() => setArrowLeft(false)}
+                onClick={handlePrevCard}
               >
                 <HiArrowNarrowLeft
                   className={`w-[24px] h-[24px] ${
@@ -91,6 +119,7 @@ const Explore = () => {
             "
                 onMouseEnter={() => setArrowRight(true)}
                 onMouseLeave={() => setArrowRight(false)}
+                onClick={handleNextCard}
               >
                 <HiArrowNarrowRight
                   className={`w-[24px] h-[24px] ${
@@ -111,21 +140,23 @@ const Explore = () => {
             max-[730px]:flex-col
           "
           >
-            {JsonExplore.map(
-              ({ id, img, name, price, location, rate }: ExploreType) => {
+            {currentCards.slice(0, 3).map(
+              (
+                { id, img, name, price, location, rate }: ExploreType,index
+              ) => {
                 return (
                   <div
                     key={id}
-                    className="bg-white h-[550px] w-[400px] border-[1px] border-[#191825]/[10%] 
+                    className={`bg-white h-[550px] w-[400px] border-[1px] border-[#191825]/[10%] 
                     gap-6
-                    rounded-[2.7rem] transition-all duration-300 flex items-center 
+                    rounded-[2.7rem] transition-all duration-700 flex items-center 
                     flex-col justify-start
                     drop-shadow-2xl
                     max-[1024px]:w-[350px] max-[1024px]:h-[550px]
                     max-[950px]:h-[500px]
                     max-[730px]:w-full max-[730px]:h-[550px]
-                    
-                  "
+                    transform
+                    `}
                   >
                     <div className="h-[60%] w-full">
                       <Image
@@ -138,9 +169,11 @@ const Explore = () => {
                         className="w-full h-full rounded-t-[2.3rem] object-cover"
                       />
                     </div>
-                    <div className="flex justify-between w-full px-[8%]
+                    <div
+                      className="flex justify-between w-full px-[8%]
                     max-[1280px]:flex-col
-                    ">
+                    "
+                    >
                       <span
                         className="font-bold text-[1.5rem] text-[#191825] w-[55%] flex
                       justify-start
@@ -175,9 +208,11 @@ const Explore = () => {
                         {location}
                       </span>
                     </div>
-                    <div className="flex justify-start w-full px-[8%] mt-[3%] items-center
+                    <div
+                      className="flex justify-start w-full px-[8%] mt-[3%] items-center
                     max-[1024px]:mt-0
-                    ">
+                    "
+                    >
                       <span
                         className="font-bold text-[1.5rem] text-[#FF5722]
                       max-[1455px]:text-[1.3rem]
@@ -187,11 +222,13 @@ const Explore = () => {
                       >
                         {rate}
                       </span>
-                      <AiFillStar className="ml-[2%] text-[#FF5722] text-[1.6rem]
+                      <AiFillStar
+                        className="ml-[2%] text-[#FF5722] text-[1.6rem]
                       max-[1455px]:text-[1.3rem]
                       max-[950px]:text-[1rem]
                       max-[730px]:text-[1.3rem]
-                      " />
+                      "
+                      />
                     </div>
                   </div>
                 );
