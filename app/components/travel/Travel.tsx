@@ -4,10 +4,12 @@ import discounted from "../../../public/travel-point/discounted.png";
 const Travel = () => {
   return (
     <section id="travel" className="">
-      <div className="grid grid-cols-10 mx-[5%] ">
+      <div className="grid grid-cols-10 mr-[5%] 
+      max-[1024px]:mx-[5%] 
+      ">
         {/* images */}
         <div className="flex col-span-6 h-full w-full
-        max-[1024px]:col-span-10
+        max-[1024px]:col-span-10 
         ">
           <div className="my-[10%] w-full
           max-[1024px]:my-0
