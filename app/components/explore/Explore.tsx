@@ -1,7 +1,7 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
-import { JsonExplore } from "../../constants/ExploreData";
+import { JsonExplore } from "../../constants/JsonDatas";
 
 import { useState } from "react";
 import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";

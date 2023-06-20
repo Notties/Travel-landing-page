@@ -6,7 +6,7 @@ import coupons from "../../../public/feature/coupons.png";
 
 const Features = () => {
   return (
-    <section id="feature">
+    <section id="features">
       <div className="grid grid-cols-10 mx-[10%]
       max-[1024px]:my-[10%]
       
