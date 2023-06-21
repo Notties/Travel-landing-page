@@ -65,21 +65,21 @@ const Nav = () => {
                     cursor-pointer transition-all text-gray-400 font-semibold
                     hover:text-[#222831]"
               >
-                <a href="#services">Discover</a>
+                <a href="#services">Services</a>
               </li>
               <li
                 className="
                     cursor-pointer transition-all text-gray-400 font-semibold
                     hover:text-[#222831]"
               >
-                <a href="#">Special Deals</a>
+                <a href="#explore">Special Deals</a>
               </li>
               <li
                 className="
                     cursor-pointer transition-all text-gray-400 font-semibold
                     hover:text-[#222831]"
               >
-                <a href="#">Contact</a>
+                <a href="#subscribe">Contact</a>
               </li>
             </ul>
           </div>

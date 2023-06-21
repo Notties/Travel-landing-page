@@ -180,7 +180,8 @@ const Testiminials = () => {
                             key={id}
                             className={`${
                               index === id - 1 ? `bg-[#F85E9F]` : `bg-[#F3F3F4]`
-                            } w-[24px] h-[24px] rounded-[50%] transition-all duration-500`}
+                            } w-[24px] h-[24px] rounded-[50%] transition-all duration-500
+                            max-[1024px]:w-[18px] max-[1024px]:h-[18px]`}
                           />
                         </>
                       ))}
