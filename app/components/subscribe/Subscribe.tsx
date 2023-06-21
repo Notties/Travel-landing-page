@@ -35,6 +35,7 @@ const Subscribe = () => {
             max-[555px]:text-[1.2rem]
             max-[1024px]:text-center
             max-[1024px]:mt-[10%] uppercase
+            max-[555px]:mx-[5%]
             "
           >
             subscribe to our newsletter
