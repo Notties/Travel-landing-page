@@ -1,6 +1,6 @@
 This is the source-code for honed my tailwind-css skills to convert figma to website.
 
-### [Live site](https://travel-landing-page-liart.vercel.app/) (in development)
+### [Live site](https://travel-landing-page-liart.vercel.app/)
 
 ## Resource
 ### Design by [uix desing](https://www.figma.com/@uixdesign)
